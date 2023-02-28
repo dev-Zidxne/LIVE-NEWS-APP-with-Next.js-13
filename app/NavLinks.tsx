@@ -1,7 +1,14 @@
-import React from "react";
+import { categories } from "../constant";
+import NavLink from "./NavLink";
 
 function NavLinks() {
-  return <div>NavLinks</div>;
+  return (
+    <nav>
+      {categories.map((category) => (
+        <NavLink key={category} category={category} />
+      ))}
+    </nav>
+  );
 }
 
 export default NavLinks;
