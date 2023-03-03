@@ -14,10 +14,10 @@ export default function RootLayout({
     <html lang="en">
       <head />
 
-      <div>
+      <body className="transition-all duration-700 bg-gray-100 dark:bg-zinc-900">
         <Header />
-        <body>{children}</body>
-      </div>
+        <div className="max-w-6xl mx-auto">{children}</div>
+      </body>
     </html>
   );
 }
