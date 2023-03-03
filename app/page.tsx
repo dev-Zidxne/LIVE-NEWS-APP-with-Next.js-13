@@ -1,7 +1,13 @@
+import { categories } from "../constant";
 import "../styles/globals.css";
 
 function Homepage() {
-  return <div>Homepage</div>;
+  const news: NewsResponse = await fetchNews(categories.join(","));
+  return (
+    <div>
+      <NewsList />
+    </div>
+  );
 }
 
 export default Homepage;
